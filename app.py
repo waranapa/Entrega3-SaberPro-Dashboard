@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-
+import os
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -76,7 +76,28 @@ C = {
     "rojo": "#9D3333",
 }
 
-app = Dash(__name__, title="Modelador Saber Pro 98")
+# ============================================================
+# CONFIGURACIÓN LOCAL / BINDER
+# ============================================================
+
+JUPYTER_PREFIX = os.environ.get("JUPYTERHUB_SERVICE_PREFIX", "/")
+
+if JUPYTER_PREFIX == "/":
+    REQUESTS_PREFIX = "/"
+else:
+    REQUESTS_PREFIX = (
+        JUPYTER_PREFIX.rstrip("/")
+        + "/proxy/8051/"
+    )
+
+print("Prefijo Dash:", REQUESTS_PREFIX)
+
+app = Dash(
+    __name__,
+    title="Modelador Saber Pro 98",
+    requests_pathname_prefix=REQUESTS_PREFIX,
+)
+
 server = app.server
 
 # ============================================================
