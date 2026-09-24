@@ -1,4 +1,11 @@
 #!/bin/bash
 set -e
+
 python app.py &
-exec jupyter notebook --ip=0.0.0.0 --port=${PORT:-8888} --NotebookApp.token='' --NotebookApp.password='' --ServerApp.allow_origin='*'
+
+exec jupyter notebook \
+  --ip=0.0.0.0 \
+  --port=${PORT:-8888} \
+  --NotebookApp.token='' \
+  --NotebookApp.password='' \
+  --ServerApp.allow_origin='*'
