@@ -1,11 +1,7 @@
 #!/bin/bash
 set -e
 
+echo "Iniciando Modelador Saber Pro 98..."
 python app.py &
 
-exec jupyter notebook \
-  --ip=0.0.0.0 \
-  --port=${PORT:-8888} \
-  --NotebookApp.token='' \
-  --NotebookApp.password='' \
-  --ServerApp.allow_origin='*'
+exec "$@"
