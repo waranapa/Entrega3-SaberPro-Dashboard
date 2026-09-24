@@ -1,0 +1,20 @@
+MODELADOR SABER PRO 98 PROFESSIONAL · VERSION 4
+
+Esta versión usa el puerto 8051 para evitar abrir accidentalmente
+una instancia antigua del dashboard.
+
+1. Active su entorno virtual.
+2. Ejecute:
+   python app.py
+3. Abra EXCLUSIVAMENTE:
+   http://127.0.0.1:8051
+
+Debe ver:
+- En la barra superior: PROFESSIONAL v4 · PORT 8051
+- En el panel izquierdo, arriba de todo: MODELO
+- Selector de tipo de modelo
+- Cuatro casillas para marcar/desmarcar variables
+- Selector de alpha
+- Pestaña MODELO en la zona principal
+
+Si abre 8050, probablemente verá una versión anterior.

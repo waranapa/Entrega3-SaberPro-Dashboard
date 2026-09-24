@@ -1,0 +1,13 @@
+Modelo,Variable,Coeficiente
+Regresión múltiple,lectura,0.33362649824146257
+Regresión múltiple,ciudadanas,0.1882157638735178
+Regresión múltiple,ingles,0.19024161911950607
+Regresión múltiple,comunicacion,0.03073184972766027
+Ridge optimizado,lectura,9.815613600026973
+Ridge optimizado,ciudadanas,6.159672798798396
+Ridge optimizado,ingles,6.497782524993198
+Ridge optimizado,comunicacion,1.3643656905048904
+Lasso optimizado,lectura,9.815880870351842
+Lasso optimizado,ciudadanas,6.159195725039048
+Lasso optimizado,ingles,6.497412588443233
+Lasso optimizado,comunicacion,1.363579935780272

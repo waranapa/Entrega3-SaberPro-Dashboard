@@ -1,0 +1,615 @@
+
+/* ==========================================================
+   MODELADOR SABER PRO 98
+   Estética Windows 95/98 Professional
+   ========================================================== */
+
+:root {
+  --desktop: #c0c0c0;
+  --panel: #d4d0c8;
+  --panel-light: #efefef;
+  --white: #ffffff;
+  --mid: #808080;
+  --dark: #404040;
+  --blue: #000080;
+  --blue-active: #0a4a9c;
+  --ink: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#react-entry-point,
+.app {
+  margin: 0;
+  min-height: 100%;
+  background: var(--desktop);
+  color: var(--ink);
+  font-family: Tahoma, "MS Sans Serif", Verdana, Arial, sans-serif;
+}
+
+body {
+  font-size: 12px;
+}
+
+/* ----------------------------------------------------------
+   MARCO SUPERIOR TIPO PROGRAMA DE WINDOWS
+   ---------------------------------------------------------- */
+.hero {
+  padding: 3px;
+  background: var(--desktop);
+  border-bottom: 2px solid var(--dark);
+}
+
+.program-titlebar {
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(90deg, #000080, #1084d0);
+  color: #fff;
+  padding: 2px 3px 2px 6px;
+  font-weight: 700;
+}
+
+.titlebar-left {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.app-icon {
+  width: 18px;
+  margin-right: 5px;
+  color: #fff;
+  font-size: 13px;
+}
+
+.app-caption {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-shadow: 1px 1px #000;
+}
+
+.caption-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.caption-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 21px;
+  height: 19px;
+  background: var(--panel);
+  color: #000;
+  border: 2px solid;
+  border-color: var(--white) var(--dark) var(--dark) var(--white);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.program-menu {
+  height: 27px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  background: var(--panel);
+  border-bottom: 1px solid var(--mid);
+}
+
+.program-menu span {
+  padding: 4px 8px;
+  color: #000;
+}
+
+.program-menu span:hover {
+  background: var(--blue);
+  color: #fff;
+}
+
+.workspace-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 10px 13px 11px;
+  background: var(--panel-light);
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid var(--mid);
+}
+
+.workspace-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.workspace-subtitle {
+  margin-top: 3px;
+  color: #333;
+  font-size: 11px;
+}
+
+.status-badge {
+  flex: 0 0 auto;
+  padding: 5px 9px;
+  background: var(--panel);
+  color: #000;
+  border: 2px solid;
+  border-color: var(--white) var(--dark) var(--dark) var(--white);
+  font-weight: 700;
+}
+
+/* ----------------------------------------------------------
+   LAYOUT
+   ---------------------------------------------------------- */
+.shell {
+  display: grid;
+  grid-template-columns: 275px 1fr;
+  min-height: calc(100vh - 110px);
+  background: var(--desktop);
+}
+
+.content {
+  min-width: 0;
+  padding: 9px 10px 18px;
+}
+
+.win-window {
+  background: var(--panel);
+  border: 2px solid;
+  border-color: var(--white) var(--dark) var(--dark) var(--white);
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+
+.window-titlebar,
+.sidebar-section-title {
+  background: #d8d8d8;
+  color: #000;
+  padding: 6px 10px;
+  font-weight: 700;
+  text-align: left;
+  border-bottom: 1px solid var(--mid);
+}
+
+/* ----------------------------------------------------------
+   SIDEBAR
+   ---------------------------------------------------------- */
+.sidebar {
+  margin: 8px 0 8px 8px;
+  align-self: start;
+}
+
+.sidebar-body {
+  padding: 9px 10px 12px;
+}
+
+.sidebar label {
+  display: block;
+  margin: 11px 0 5px;
+  font-weight: 700;
+}
+
+.sidebar-section-title {
+  margin: 18px -10px 4px;
+  border-top: 2px solid;
+  border-color: var(--white) transparent transparent;
+}
+
+.help {
+  color: #444;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.model-help {
+  padding: 7px;
+  background: #eeeeee;
+  border: 1px solid #a0a0a0;
+}
+
+/* ----------------------------------------------------------
+   CONTROLES WINDOWS
+   ---------------------------------------------------------- */
+.win-button,
+button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 6px 9px;
+  background: var(--panel);
+  color: #000;
+  font-family: Tahoma, "MS Sans Serif", sans-serif;
+  font-weight: 700;
+  border: 2px solid;
+  border-color: var(--white) var(--dark) var(--dark) var(--white);
+  border-radius: 0 !important;
+  cursor: pointer;
+}
+
+.win-button:active,
+button:active {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--dark) var(--white) var(--white) var(--dark);
+}
+
+.Select-control,
+.Select-menu-outer,
+.Select-menu,
+.Select-placeholder,
+.Select-value-label {
+  border-radius: 0 !important;
+  font-family: Tahoma, "MS Sans Serif", sans-serif !important;
+}
+
+.Select-control {
+  min-height: 32px !important;
+  background: #fff !important;
+  border: 2px solid !important;
+  border-color: var(--dark) var(--white) var(--white) var(--dark) !important;
+  box-shadow: none !important;
+}
+
+.Select-option.is-selected,
+.VirtualizedSelectSelectedOption {
+  background: var(--blue) !important;
+  color: #fff !important;
+}
+
+.model-checklist {
+  padding: 3px 0;
+}
+
+.model-checklist label {
+  display: block;
+  margin: 0 0 3px;
+  padding: 5px 6px;
+  background: #ececec;
+  border: 1px solid #a5a5a5;
+  font-weight: 400;
+}
+
+.model-checklist input {
+  margin-right: 7px;
+  accent-color: var(--blue);
+}
+
+/* Sliders */
+.rc-slider-rail {
+  background: #888 !important;
+  height: 4px !important;
+}
+
+.rc-slider-track {
+  background: var(--blue-active) !important;
+  height: 4px !important;
+}
+
+.rc-slider-handle {
+  width: 15px !important;
+  height: 15px !important;
+  margin-top: -6px !important;
+  background: var(--panel) !important;
+  border: 2px solid !important;
+  border-color: var(--white) var(--dark) var(--dark) var(--white) !important;
+  border-radius: 0 !important;
+}
+
+/* ----------------------------------------------------------
+   KPI
+   ---------------------------------------------------------- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7px;
+  margin-bottom: 8px;
+}
+
+.kpi-card {
+  min-height: 78px;
+  background: var(--panel);
+  border: 2px solid;
+  border-color: var(--white) var(--dark) var(--dark) var(--white);
+}
+
+.kpi-titlebar {
+  padding: 5px 8px;
+  background: #dedede;
+  color: #000;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  border-bottom: 1px solid #999;
+}
+
+.kpi-body {
+  padding: 7px 10px 8px;
+  text-align: center;
+}
+
+.kpi-card h2 {
+  margin: 0 0 3px;
+  color: var(--blue);
+  font-size: 22px;
+}
+
+.kpi-note {
+  margin: 0;
+  color: #444;
+  font-size: 10px;
+}
+
+/* ----------------------------------------------------------
+   TABS
+   ---------------------------------------------------------- */
+.classic-tabs {
+  background: transparent;
+}
+
+.tab {
+  background: var(--panel) !important;
+  color: #000 !important;
+  border: 2px solid !important;
+  border-color: var(--white) var(--dark) var(--dark) var(--white) !important;
+  border-radius: 0 !important;
+  padding: 8px 7px !important;
+  font-family: Tahoma, "MS Sans Serif", sans-serif !important;
+  font-size: 11px !important;
+}
+
+.tab--selected {
+  background: var(--blue) !important;
+  color: #fff !important;
+  font-weight: 700 !important;
+  border-color: #5b8ec2 #001f4f #001f4f #5b8ec2 !important;
+}
+
+/* ----------------------------------------------------------
+   GRÁFICOS
+   ---------------------------------------------------------- */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.grid-2 > div,
+.panel,
+.model-window,
+.model-summary {
+  background: #f2f2f2;
+  border: 2px solid;
+  border-color: var(--white) var(--dark) var(--dark) var(--white);
+  overflow: hidden;
+}
+
+.panel {
+  margin-top: 8px;
+}
+
+.dash-graph {
+  background: #f2f2f2 !important;
+}
+
+.modebar {
+  background: var(--panel) !important;
+  border: 1px solid var(--mid) !important;
+}
+
+/* ----------------------------------------------------------
+   PESTAÑA MODELO
+   ---------------------------------------------------------- */
+.model-layout {
+  display: grid;
+  grid-template-columns: minmax(420px, 1.25fr) minmax(330px, 0.75fr);
+  gap: 9px;
+  margin-top: 8px;
+}
+
+.model-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  padding: 10px;
+}
+
+.mini-metric {
+  padding: 9px 6px;
+  text-align: center;
+  background: #ededed;
+  border: 2px solid;
+  border-color: var(--dark) var(--white) var(--white) var(--dark);
+}
+
+.mini-label {
+  font-size: 10px;
+  color: #333;
+}
+
+.mini-value {
+  margin-top: 3px;
+  color: var(--blue);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.model-subheading {
+  margin: 5px 10px 0;
+  font-weight: 700;
+}
+
+.model-equation {
+  margin: 6px 10px 8px;
+  padding: 9px;
+  background: #fff;
+  color: #000;
+  border: 2px solid;
+  border-color: var(--dark) var(--white) var(--white) var(--dark);
+  white-space: pre-wrap;
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.model-text {
+  margin: 0;
+  padding: 5px 11px 12px;
+  line-height: 1.45;
+}
+
+/* ----------------------------------------------------------
+   NARRATIVA / TABLAS
+   ---------------------------------------------------------- */
+.narrative,
+.conclusions,
+.table-window {
+  margin: 8px 0 0;
+  line-height: 1.5;
+}
+
+.narrative p,
+.conclusions-body,
+.table-window > div:not(.window-titlebar) {
+  margin: 0;
+  padding: 11px 14px;
+}
+
+.conclusions-body p {
+  margin: 0 0 8px;
+}
+
+.dash-table-container {
+  padding: 8px;
+  background: var(--panel);
+}
+
+footer {
+  margin: 12px 0 3px;
+  color: #333;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* ----------------------------------------------------------
+   RESPONSIVE
+   ---------------------------------------------------------- */
+@media (max-width: 1150px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    margin: 8px 8px 0;
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .model-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .workspace-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .status-badge {
+    display: none;
+  }
+
+  .content {
+    padding: 7px;
+  }
+
+  .grid-2,
+  .kpi-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-menu {
+    overflow-x: auto;
+  }
+}
+
+
+/* ==========================================================
+   V4 - PANEL DE MODELO SIEMPRE VISIBLE
+   ========================================================== */
+.model-main-title {
+  background: #000080 !important;
+  color: #ffffff !important;
+  text-align: center !important;
+  letter-spacing: 1px;
+  padding: 7px 8px !important;
+}
+
+.sidebar-step {
+  margin: 11px 0 5px;
+  padding: 5px 7px;
+  background: #e6e6e6;
+  color: #000000;
+  border: 1px solid #8a8a8a;
+  font-weight: 700;
+}
+
+.prominent-checklist {
+  padding: 4px;
+  background: #ffffff;
+  border: 2px inset #c0c0c0;
+}
+
+.prominent-checklist label {
+  display: block;
+  margin: 0 !important;
+  padding: 7px 6px !important;
+  background: #ffffff !important;
+  border: 0 !important;
+  color: #000000;
+  cursor: pointer;
+}
+
+.prominent-checklist label:hover {
+  background: #000080 !important;
+  color: #ffffff !important;
+}
+
+.prominent-checklist input {
+  margin-right: 8px;
+}
+
+.model-instruction {
+  margin: 10px 0 4px;
+  padding: 7px 8px;
+  background: #ffffe1;
+  color: #000000;
+  border: 1px solid #808080;
+  font-size: 10px;
+  line-height: 1.35;
+}
+
+.status-badge {
+  color: #000080 !important;
+  font-weight: 700;
+}
+
+@media (min-width: 1151px) {
+  .sidebar {
+    position: sticky;
+    top: 4px;
+    max-height: calc(100vh - 8px);
+    overflow-y: auto;
+  }
+}

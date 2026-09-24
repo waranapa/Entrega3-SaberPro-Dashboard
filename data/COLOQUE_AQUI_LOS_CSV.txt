@@ -1,0 +1,8 @@
+Copie aquí los seis CSV generados por el notebook en la carpeta salidas_dashboard:
+
+1. datos_dashboard.csv
+2. metricas_modelos.csv
+3. coeficientes_modelos.csv
+4. vif.csv
+5. correlaciones.csv
+6. predicciones_dashboard.csv

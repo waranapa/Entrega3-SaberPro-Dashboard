@@ -1,0 +1,10 @@
+ENLACES DE ENTREGA
+==================
+
+Repositorio GitHub:
+https://github.com/USUARIO/REPOSITORIO
+
+Dashboard en Binder:
+https://mybinder.org/v2/gh/USUARIO/REPOSITORIO/HEAD?urlpath=proxy/8050/
+
+Reemplace USUARIO y REPOSITORIO después de publicar el proyecto en GitHub.
